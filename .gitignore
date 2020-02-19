@@ -6,3 +6,11 @@ node_modules
 demo/webpack/dist
 dist/test-apidocs
 /_build/
+
+# 排除 dist 下所有文件，除了 dist/js 文件夹下以 jsplumb 开头的文件
+dist/*
+!dist/js
+dist/js/*
+!dist/js/jsplumb*
+
+jekyll/.jekyll-cache
