@@ -19,6 +19,8 @@ For the Community edition the documentation can now be found here:
 
 [http://jsplumb.github.io/jsplumb/](http://jsplumb.github.io/jsplumb/)
 
+API 文档要结合 `index.d.ts` 看，API 生成的文档好像有点问题
+
 ## Changelog
 
 Can be found at [http://jsplumb.github.io/jsplumb/changelog.html](http://jsplumb.github.io/jsplumb/changelog.html)
