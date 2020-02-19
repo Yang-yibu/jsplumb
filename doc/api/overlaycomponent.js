@@ -3,12 +3,16 @@
 * @class OverlayCapableJsPlumbUIComponent
 * @extends jsPlumbUIComponent
 */
+function OverlayCapableJsPlumbUIComponent() {
+
+}
 
 /**
 * List of Overlays for this component.
 * @property overlays
-* @type {List[Overlay]}
+* @type {List.<Overlay>}
 */
+OverlayCapableJsPlumbUIComponent.prototype.overlays
 
 /**
 * Returns the label text for this component (or a function if you are labelling with a function).
@@ -20,6 +24,7 @@
 * @see {@link #getOverlay}
 * @see {@link #getLabelOverlay}
 */
+OverlayCapableJsPlumbUIComponent.prototype.getLabel
 
 /**
 * @method getLabelOverlay

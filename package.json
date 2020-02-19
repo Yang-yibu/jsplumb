@@ -16,7 +16,10 @@
   "types": "index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "init": "node ./install.js"
+    "init": "node ./install.js",
+    "build:doc": "rm -rf dist/apidocs && echo \"> 旧文件清理成功成功！\" && npm run build:jsdoc && echo \"\" && npm run build:yuidoc && http-server",
+    "build:jsdoc": "jsdoc --verbose -a all -t node_modules/docdash doc/api -d dist/apidocs/jsdoc",
+    "build:yuidoc": "yuidoc  ./doc/api/  -o ./dist/apidocs/yuidoc"
   },
   "repository": {
     "type": "git",
@@ -32,6 +35,7 @@
   "license": "(MIT OR GPL-2.0)",
   "devDependencies": {
     "biltong": "^0.4.0",
+    "docdash": "^1.2.0",
     "grunt": "~0.4.1",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-concat": "~0.3.0",
@@ -43,8 +47,11 @@
     "grunt-exec": "^1.0.1",
     "grunt-jekyll": "~0.4.2",
     "jsbezier": "0.9.4",
+    "jsdoc": "^3.6.3",
     "katavorio": "1.4.9",
+    "minami": "^1.2.3",
     "morgan": "1.8.0",
-    "mottle": "1.0.0"
+    "mottle": "1.0.0",
+    "yuidocjs": "^0.10.2"
   }
 }
