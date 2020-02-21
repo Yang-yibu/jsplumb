@@ -171,25 +171,25 @@ module.exports = function(grunt) {
             docs:{
                 cwd: 'jekyll/_site/docs',  // set working folder / root to copy
                 src: '**/*',           // copy all files and subfolders
-                dest: 'docs',    // destination folder
+                dest: './dist/doc',    // destination folder
                 expand: true
             },
             docs_js:{
                 cwd: 'jekyll/_site/js',  // set working folder / root to copy
                 src: '**/*',           // copy all files and subfolders
-                dest: 'docs/js',    // destination folder
+                dest: './dist/doc/js',    // destination folder
                 expand: true
             },
             docs_css:{
                 cwd: 'jekyll/_site/css',  // set working folder / root to copy
                 src: '**/*',           // copy all files and subfolders
-                dest: 'docs/css',    // destination folder
+                dest: './dist/doc/css',    // destination folder
                 expand: true
             },
             docs_img:{
                 cwd: 'jekyll/_site',  // set working folder / root to copy
                 src: 'logo-medium-jsplumb.png',           // copy all files and subfolders
-                dest: 'docs',    // destination folder
+                dest: './dist/doc',    // destination folder
                 expand: true
             }
         }
@@ -318,7 +318,8 @@ module.exports = function(grunt) {
     grunt.registerTask("finaliseDocs", function() {
         _insertHTMLSuffixIntoDocLinks("jekyll/_site/docs");
         _replaceContents("jekyll/_site/docs");
-        grunt.file.write("docs/index.html", "<!doctype html><html><head><meta http-equiv=\"refresh\" content=\"0; URL='home.html'\" /></head></html>");
+        // grunt.file.write("docs/index.html", "<!doctype html><html><head><meta http-equiv=\"refresh\" content=\"0; URL='home.html'\" /></head></html>");
+        grunt.file.write("jekyll/_site/docs/index.html", "<!doctype html><html><head><meta http-equiv=\"refresh\" content=\"0; URL='home.html'\" /></head></html>");
     });
 
 

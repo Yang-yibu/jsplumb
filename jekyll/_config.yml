@@ -1,4 +1,4 @@
 name: jsPlumb Community Edition Documentation
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 permalink: :categories/:title.html

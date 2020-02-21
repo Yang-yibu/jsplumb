@@ -14,3 +14,5 @@ dist/js/*
 !dist/js/jsplumb*
 
 jekyll/.jekyll-cache
+jekyll/_site
+jekyll/docs
